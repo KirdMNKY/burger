@@ -1,2 +1,54 @@
 // Burger list layout
 
+<h1>Burgerlicious</h1>
+
+<p>Add a burger and choose to devour it now or later!</p>
+
+<!-- Pass in data from server.js -->
+<div id="display">
+  {{#each burger}}
+  // Conditional to check if devoured or not
+  if(!{{this.devoured}}){
+      <div id="fresh">
+        <ul>
+        <li>
+            <p><span class="label">ID:</span> {{this.id}}</p>
+            <p><span class="label">Burger:</span> {{this.burger}}</p>
+
+            <button data-id="{{this.id}}" class="devourBurger">Devour</button>
+
+        </li>
+        </ul>
+      </div>
+    
+  }else{
+      <div id="eaten">
+        <ul>
+        <li>
+            <p><span class="label">ID:</span> {{this.id}}</p>
+            <p><span class="label">Burger:</span> {{this.burger}}</p>
+
+        </li>
+        </ul>
+      </div>
+  }
+    
+  {{/each}}
+
+</div>
+<h2>Add a Burger</h2>
+
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id">
+  </div>
+
+  <div class="form-group">
+    <label for="burger">Burger:</label>
+    <textarea id="burger" name="burger" rows="8" cols="40"></textarea>
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>

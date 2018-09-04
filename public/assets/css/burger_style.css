@@ -1,0 +1,18 @@
+#display {
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+}
+
+#fresh {
+    position: relative;
+    padding-left: 50px;
+    float: left;
+}
+
+#eaten {
+    position: relative;
+    padding-right: 50px;
+    float: right;
+}
+
