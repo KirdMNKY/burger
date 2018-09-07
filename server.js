@@ -30,3 +30,7 @@ app.get("/", function(req, res) {
     res.render("index", { burgers: data });
   });
 });
+
+app.listen(PORT, function() {
+    console.log("Listening on port:%s", PORT)  
+})
