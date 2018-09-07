@@ -1,6 +1,6 @@
 // ORM specific code
 
-var orm = require("./config/orm.js");
+var orm = require("../config/orm.js");
 
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
@@ -8,7 +8,7 @@ $(function() {
       var id = $(this).data("id");
   
       // Send the DELETE request.
-      $.ajax("/api/quotes/" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(
         function() {

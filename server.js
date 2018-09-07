@@ -20,13 +20,13 @@ var mysql = require("mysql");
 
 var connection = require("./config/connection.js");
 
-// Use Handlebars to render the main index.html page with the todos in it.
+//Use Handlebars to render the main index.html page with the todos in it.
 app.get("/", function(req, res) {
   connection.query("SELECT * FROM burgers;", function(err, data) {
     if (err) {
       return res.status(500).end();
     }
-    res.write(data);
-    // res.render("index", { burgers: data });
+    console.log(data);
+    res.render("index", { burgers: data });
   });
 });
