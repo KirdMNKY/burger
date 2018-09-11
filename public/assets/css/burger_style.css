@@ -16,3 +16,8 @@
     float: right;
 }
 
+body {
+    background-color: bisque;
+    margin: 0 auto;
+}
+
