@@ -7,9 +7,21 @@
 <!-- Pass in data from server.js -->
 <div id="display">
   {{#each burger}}
-  // Conditional to check if devoured or not
-  if(!{{this.devoured}}){
-      <div id="fresh">
+  <!--Conditional to check if devoured or not-->
+  {{#if devoured }}
+        <div id="eaten">
+        <ul>
+        <li>
+            <p><span class="label">ID:</span> {{this.id}}</p>
+            <p><span class="label">Burger:</span> {{this.burger}}</p>
+
+        </li>
+        </ul>
+      </div>
+     
+    
+  {{else}}
+ <div id="fresh">
         <ul>
         <li>
             <p><span class="label">ID:</span> {{this.id}}</p>
@@ -20,19 +32,7 @@
         </li>
         </ul>
       </div>
-    
-  }else{
-      <div id="eaten">
-        <ul>
-        <li>
-            <p><span class="label">ID:</span> {{this.id}}</p>
-            <p><span class="label">Burger:</span> {{this.burger}}</p>
-
-        </li>
-        </ul>
-      </div>
-  }
-    
+  {{/if}}  
   {{/each}}
 
 </div>
